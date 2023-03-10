@@ -1,0 +1,15 @@
+unstructured==0.2.5
+unstructured_api_tools>=0.4.4
+
+httpx
+image
+fastapi
+protobuf==3.20.*
+ratelimit
+requests
+sentencepiece
+torch
+transformers
+
+# NOTE(robinson) - Required pins for security scans
+jupyter-core>=4.11.2
