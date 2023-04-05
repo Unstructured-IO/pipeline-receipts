@@ -26,6 +26,7 @@ WORKDIR ${HOME}
 ENV PYTHONPATH="${PYTHONPATH}:${HOME}"
 ENV PATH="/home/${NB_USER}/.local/bin:${PATH}"
 
+COPY logger_config.yaml logger_config.yaml
 COPY requirements/dev.txt requirements-dev.txt
 COPY requirements/base.txt requirements-base.txt
 COPY prepline_receipts prepline_receipts
@@ -39,5 +40,6 @@ RUN python3.8 -m pip install --no-cache -r requirements-base.txt \
 #EXPOSE 5000
 
 #ENTRYPOINT ["uvicorn", "prepline_receipts.api.receipts:app", \
+#  "--log-config", "logger_config.yaml", \
 #  "--host", "0.0.0.0", \
 #  "--port", "5000"]
