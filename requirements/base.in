@@ -4,7 +4,7 @@ unstructured_api_tools>=0.4.4
 httpx
 image
 fastapi
-protobuf==3.20.*
+protobuf==4.22.*
 ratelimit
 requests
 sentencepiece
